@@ -370,6 +370,38 @@ img {
   width: 120px;
 }
 
+/*============= CONTACT US ============*/
+.contact__us{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 700px;
+}
+
+.contact__us h2{
+  margin-bottom: 1rem;
+}
+
+.contact__us p{
+  margin: 0.5rem 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.contact__us a{
+  color: var(--first-color);
+  text-decoration: none;
+}
+
+.contact__us .address{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--first-color)
+}
+
 /*=============== PROGRAM ===============*/
 .program__container{
   grid-template-columns: 225px;
