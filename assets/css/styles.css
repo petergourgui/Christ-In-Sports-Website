@@ -484,6 +484,42 @@ img {
   opacity: 1;
 }
 
+/*=============== PICTURES ===============*/
+.slider-frame{
+  overflow: hidden;
+  width: 60vw;
+  max-width: 800px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+}
+
+.slide-images {
+  display: flex;
+  position: relative;
+  width: 300%;
+  animation: slide_animation 20s infinite alternate;
+}
+
+.img-container {
+  flex: 1 0 100%; /* Each image takes full width of the frame */
+}
+
+.img-container img {
+  width: 100%;
+  height: auto;
+}
+
+@keyframes slide_animation {
+  0%, 10% { transform: translateX(0); }
+  20%, 30% { transform: translateX(-100%); }
+  40%, 50% { transform: translateX(-200%); }
+  60%, 70% { transform: translateX(-100%); }
+  80%, 90%, 100% { transform: translateX(0); }
+}
+
 /*=============== PRICING ===============*/
 .pricing__container{
   grid-template-columns: 285px;
