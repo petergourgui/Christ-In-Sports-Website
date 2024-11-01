@@ -485,40 +485,98 @@ img {
 }
 
 /*=============== PICTURES ===============*/
-.slider-frame{
-  overflow: hidden;
-  width: 60vw;
+.mySlides{
+  display: none;
+}
+.slideshow-container{
   max-width: 800px;
-  height: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 20px auto;
-}
-
-.slide-images {
-  display: flex;
   position: relative;
-  width: 300%;
-  animation: slide_animation 20s infinite alternate;
+  margin: auto;
+}
+.prev, .next{
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: var(--first-color);
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
 }
 
-.img-container {
-  flex: 1 0 100%; /* Each image takes full width of the frame */
-}
-
-.img-container img {
+.img-container{
   width: 100%;
-  height: auto;
+  padding-top: 56.25%;
+  position: relative;
+  overflow: hidden;
 }
 
-@keyframes slide_animation {
-  0%, 10% { transform: translateX(0); }
-  20%, 30% { transform: translateX(-100%); }
-  40%, 50% { transform: translateX(-200%); }
-  60%, 70% { transform: translateX(-100%); }
-  80%, 90%, 100% { transform: translateX(0); }
+.slide-image{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
+
+.next{
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover{
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.text{
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  bottom: 8px;
+}
+.numbertext{
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+.dot{
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active, .dot:hover{
+  background-color: #717171;
+}
+.fade{
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade{
+  from {opacity: .4}
+  to{opacity: 1}
+}
+@keyframes fade{
+  from {opacity: .4}
+  to{opacity: 1}
+}
+
 
 /*=============== PRICING ===============*/
 .pricing__container{
